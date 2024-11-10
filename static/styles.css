@@ -1,0 +1,252 @@
+/* CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   
+    overflow-x: hidden; /* This will hide any horizontal overflow */
+    scroll-behavior: smooth;
+}
+/* CSS Variable */
+:root {
+    --navbar-height: 59px; /* Corrected '59x' to '59px' */
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;  /* Space between logo and nav links */
+   /* height: var(--navbar-height);    /* Set height for the navbar */
+    padding: 0;                 /* Optional padding */
+    /* background-color: #f8f8f8;   */
+    position: relative;
+    top: 0px;
+}
+
+/* Logo and Image */
+#logo{
+    margin: 10px 34px;
+    margin-right: 1px; 
+}
+
+#logo img{
+    height: 59px;
+    /* margin: 3px 6px; */
+    margin: 0; 
+}
+
+/* #navbar{
+    position: relative;
+} */
+/* Navigation Bar List Styling */
+#navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    /* colour white */
+    list-style: None;
+    font-size: 1.3rem;
+    display: flex;        /* Use flex on li to align items inside */
+    align-items: center;  /*Center content vertically within li */
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 10px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section  */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 726px;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    /* "{{ url_for('static', filename='images/food_on_table.jpg') }}  */
+    background: url('/static/images/brown_back.jpg');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 750px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Services Section  */
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid brown;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 10px;
+    border-radius: 28px;
+
+}
+#services .box img{
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+#client-section{
+    position: relative;
+    height: 344px;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(/static/images/food_on_table.jpg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients img{
+    height: 100px;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+/* Contact Section  */
+
+#contact{
+    position: relative;
+    /*overflow: hidden; /* Prevents the pseudo-element from overflowing */
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    top: 0; /* Make sure it starts from the top */
+    left: 0; /* Make sure it starts from the left */    
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(/static/images/contact_photo.jpg) no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    scroll-margin-top: 10px;
+}
+
+#contact-box form{
+    width:40%;
+    z-index:1;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+/* Utility Classes   */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

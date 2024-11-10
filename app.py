@@ -13,7 +13,7 @@ def get_db_connection():
     return( pymysql.connect(
         host='localhost',
         user='root',  # replace with your MySQL username
-        password='1106@MySql',  # replace with your MySQL password
+        password='abcd',  # replace with your MySQL password
         database='my_food_app'  # replace with your database name
     ))
 
